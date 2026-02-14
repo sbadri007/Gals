@@ -91,8 +91,9 @@ h2 {
 /* Polaroid */
 .polaroid {
   background: white;
-  padding: 15px;
-  width: 260px;
+  padding: 20px;
+  width: 450px;
+  max-width: 90%;
   margin: 30px auto;
   box-shadow: 0 10px 20px rgba(0,0,0,0.2);
   transform: rotate(-2deg);
@@ -101,13 +102,15 @@ h2 {
 .polaroid img {
   width: 100%;
   display: block;
+  max-height: 500px;
+  object-fit: cover;
 }
 
 .polaroid .image-placeholder {
   width: 100%;
   background: #f5f5f5;
   border: 2px dashed #ddd;
-  min-height: 260px;
+  min-height: 450px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,8 +119,9 @@ h2 {
 
 .polaroid p {
   font-family: 'Playfair Display', serif;
-  margin-top: 10px;
+  margin-top: 15px;
   color: #333;
+  font-size: 1.2rem;
 }
 
 /* Roses */

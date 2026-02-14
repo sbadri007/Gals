@@ -19,19 +19,6 @@ function checkPassword() {
   }
 }
 
-function startCountdown() {
-  const targetDate = new Date("Feb 14, 2026").getTime();
-
-  setInterval(() => {
-    const now = new Date().getTime();
-    const diff = targetDate - now;
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-
-    document.getElementById("countdown").innerText =
-      `💖 ${days} days until Galentine’s Day 💖`;
-  }, 1000);
-}
-
 function sayNo() {
   document.getElementById("response").innerText =
     "You can’t say no because we’re together forever 💅💖";

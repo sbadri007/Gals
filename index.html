@@ -1,66 +1,105 @@
-// PERSONALIZE THESE FOR EACH FRIEND
-const friendName = "Shruti";      // change per friend
-const password = "nooni";         // change per friend
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sharan’s Galentines 2026 💖</title>
 
-document.getElementById("friend-name").innerText = friendName;
-document.getElementById("friend-name-2").innerText = friendName;
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 
-const steps = document.querySelectorAll(".step");
-let currentStep = 0;
+  <link rel="stylesheet" href="style.css">
+</head>
 
-// PASSWORD CHECK
-function checkPassword() {
-  const input = document.getElementById("passwordInput").value;
+<body>
 
-  if (input === password) {
-    document.getElementById("password-screen").style.display = "none";
-    const mainContent = document.getElementById("main-content");
-    mainContent.style.display = "flex";
-    mainContent.classList.add("show");
-    showStep(0);
-  } else {
-    alert("Nope 😤 try again bestie");
-  }
-}
+<!-- PASSWORD SCREEN -->
+<div id="password-screen">
+  <h1>💌 Enter the Secret Code 💌</h1>
+  <input type="password" id="passwordInput" placeholder="hint: my nickname for you">
+  <button onclick="checkPassword()">Enter</button>
+</div>
 
-// STEP CONTROL
-function showStep(index) {
-  steps.forEach(step => step.classList.remove("active"));
-  steps[index].classList.add("active");
-}
 
-function nextStep() {
-  if (currentStep < steps.length - 1) {
-    currentStep++;
-    showStep(currentStep);
-  }
-}
+<!-- MAIN CONTENT WRAPPER -->
+<div id="main-content">
+  <div class="container">
 
-// ANSWERS
-function sayNo() {
-  document.getElementById("response").innerText =
-    "You can’t say no because we’re together forever 💅💖";
-}
+  <!-- SECTION 1: INTRO -->
+  <section class="step">
+  <h1>Happy Galentine’s Day 💕</h1>
+  <h2>
+      To my favorite human, I cannot imagine anyone else being my dearest Akka.
+      I love you so much, <span id="friend-name"></span> 💖
+   </h2>
+  <button onclick="nextStep()">Next →</button>
+</section>
 
-function sayYes() {
-  document.getElementById("response").innerText =
-    "YAY 💕 Galentines forever!!!";
-  burstHearts();
-}
+  <!-- SECTION 2: PHOTO -->
+  <section class="step">
+    <div class="polaroid">
+      <!-- Option 1: Replace with your image URL -->
+      <!-- <img src="YOUR_IMAGE_URL_HERE" alt="Us together"> -->
+      
+      <!-- Option 2: Upload to assets folder and use -->
+      <!-- <img src="assets/friend.jpg" alt="Us together"> -->
+      
+      <!-- Placeholder (delete this when you add your image) -->
+      <div class="image-placeholder">
+        <p style="color: #999; padding: 40px; font-size: 0.9rem; margin: 0;">
+          📸 Add your photo here!<br><br>
+          <small>Replace the placeholder div above with:<br>
+          &lt;img src="YOUR_IMAGE_URL" alt="Us together"&gt;</small>
+        </p>
+      </div>
+      
+      <p>Us forever ♡</p>
+    </div>
+    <button onclick="nextStep()">Next →</button>
+  </section>
 
-// HEARTS
-function burstHearts() {
-  const container = document.getElementById("hearts-container");
+  <!-- SECTION 3: SONG -->
+  <section class="step">
+    <p>
+      This song always reminds me of us — our room, Alexa on full volume,
+      and zero worries 💗
+    </p>
+    <audio controls>
+      <source src="assets/song.mp3" type="audio/mpeg">
+    </audio>
+    <button onclick="nextStep()">Next →</button>
+  </section>
 
-  for (let i = 0; i < 40; i++) {
-    const heart = document.createElement("div");
-    heart.className = "heart";
-    heart.innerText = "❤️";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.top = "100vh";
-    heart.style.fontSize = Math.random() * 20 + 20 + "px";
+  <!-- SECTION 4: MESSAGE -->
+  <section class="step">
+    <div class="letter">
+      <p>
+        Dear <span id="friend-name-2"></span>,<br><br>
+        Being your thanga papa has been the best mumala.
+        Thank you for always being there, listening to me,
+        and choosing me every time. I choose you, always 💖
+      </p>
+    </div>
+    <button onclick="nextStep()">Next →</button>
+  </section>
 
-    container.appendChild(heart);
-    setTimeout(() => heart.remove(), 2000);
-  }
-}
+  <!-- SECTION 5: QUESTION -->
+  <section class="step">
+    <div class="question-box">
+      <p>Will you be my Galentine? 💘</p>
+      <button onclick="sayYes()">YES 💖</button>
+      <button onclick="sayNo()">NO 🙄</button>
+    </div>
+    <p id="response"></p>
+  </section>
+
+  </div>
+  <!-- End container -->
+
+  <div id="hearts-container"></div>
+
+</div>
+<!-- End main-content -->
+
+<script src="script.js"></script>
+</body>
+</html>

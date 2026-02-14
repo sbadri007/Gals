@@ -156,3 +156,16 @@ button:hover {
     opacity: 0;
   }
 }
+
+.step {
+  display: none;
+  text-align: center;
+}
+
+.step.active {
+  display: block;
+}
+
+button {
+  margin-top: 20px;
+}

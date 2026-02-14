@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sharan’s Galentines 2026 💖</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- PASSWORD SCREEN -->
+<div id="password-screen">
+  <h1>💌 Enter the Secret Code 💌</h1>
+  <input type="password" id="passwordInput" placeholder="hint: our inside joke">
+  <button onclick="checkPassword()">Enter</button>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="main-content">
+
+  <div class="container">
+    <h1>Happy Galentine’s Day 💕</h1>
+    <h2>To my favorite human, I cannot imagine anyone else being my dearest Akka, I love you so much! <span id="friend-name"></span></h2>
+
+    <p id="countdown"></p>
+
+    <!-- Polaroid Photo -->
+    <div class="polaroid">
+      <img src="assets/friend.jpg" alt="Us together">
+      <p>Us forever ♡</p>
+    </div>
+
+    <!-- Roses -->
+    <div class="roses">🌹 🌹 🌹 🌹 🌹</div>
+
+    <!-- Music -->
+    <div class="music">
+      <p>This song always reminds me of us 💗</p>
+      <audio controls>
+        <source src="assets/song.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <!-- Love Letter -->
+    <div class="letter">
+      <p>
+        Dear <span id="friend-name-2"></span>,<br><br>
+        Life is louder, funnier, and warmer with you in it.
+        Thank you for being my constant, my chaos, my comfort.
+        I choose you always. 💖
+      </p>
+    </div>
+
+    <!-- Question -->
+    <div class="question-box">
+      <p>Will you be my Galentine? 💘</p>
+      <button onclick="sayYes()">YES 💖</button>
+      <button onclick="sayNo()">NO 🙄</button>
+    </div>
+
+    <p id="response"></p>
+  </div>
+
+</div>
+
+<div id="hearts-container"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

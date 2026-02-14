@@ -48,6 +48,32 @@ function sayYes() {
 }
 
 // HEARTS
+let heartsInterval;
+
+function startContinuousHearts() {
+  // Initial burst
+  burstHearts();
+  
+  // Then keep adding hearts every 500ms
+  heartsInterval = setInterval(() => {
+    addHeart();
+  }, 500);
+}
+
+function addHeart() {
+  const container = document.getElementById("hearts-container");
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerText = "❤️";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.top = "-50px";
+  heart.style.fontSize = Math.random() * 20 + 20 + "px";
+  heart.style.animationDuration = (Math.random() * 2 + 3) + "s";
+
+  container.appendChild(heart);
+  setTimeout(() => heart.remove(), 5000);
+}
+
 function burstHearts() {
   const container = document.getElementById("hearts-container");
 

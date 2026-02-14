@@ -1,0 +1,108 @@
+#password-screen {
+  height: 100vh;
+  background: linear-gradient(135deg, #f06292, #fce4ec);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Playfair Display', serif;
+}
+
+#password-screen input {
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  margin: 10px;
+}
+
+#password-screen button {
+  background: #c2185b;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f5dce6, #fff4ec);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  color: #c2185b;
+  font-size: 3rem;
+}
+
+h2 {
+  font-weight: 300;
+  color: #6a1b4d;
+}
+
+.photo-frame {
+  margin: 30px auto;
+  border: 8px solid #f8bbd0;
+  border-radius: 20px;
+  width: 280px;
+  overflow: hidden;
+}
+
+.photo-frame img {
+  width: 100%;
+  display: block;
+}
+
+.roses {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+.music {
+  margin: 30px 0;
+}
+
+.question-box p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #ad1457;
+}
+
+button {
+  margin: 10px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: #f06292;
+  color: white;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+#response {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #880e4f;
+}
+
+/* Hearts animation */
+.heart {
+  position: fixed;
+  font-size: 24px;
+  animation: floatUp 2s ease-in forwards;
+}
+
+@keyframes floatUp {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-200px); }
+}

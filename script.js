@@ -63,4 +63,17 @@ function burstHearts() {
 }
 
 function startPetals() {
-  for
+  for (let i = 0; i < 10; i++) {
+    const petal = document.createElement("div");
+    petal.innerText = "🌹";
+    petal.style.position = "fixed";
+    petal.style.left = Math.random() * 100 + "vw";
+    petal.style.top = "-10px";
+    petal.style.fontSize = "24px";
+    petal.style.animation = "fall 6s linear";
+
+    document.body.appendChild(petal);
+
+    setTimeout(() => petal.remove(), 6000);
+  }
+}

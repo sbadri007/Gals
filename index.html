@@ -22,9 +22,10 @@
 
 <!-- MAIN CONTENT WRAPPER -->
 <div id="main-content">
+  <div class="container">
 
-<!-- SECTION 1: INTRO -->
-<section class="step">
+  <!-- SECTION 1: INTRO -->
+  <section class="step">
   <h1>Happy Galentine’s Day 💕</h1>
   <h2>
       To my favorite human, I cannot imagine anyone else being my dearest Akka.
@@ -36,7 +37,12 @@
   <!-- SECTION 2: PHOTO -->
   <section class="step">
     <div class="polaroid">
-      <img src="assets/friend.jpg" alt="Us together">
+      <div class="image-placeholder">
+        <p style="color: #999; padding: 40px; font-size: 0.9rem;">
+          📸 Add your photo here!<br>
+          <small>Replace assets/friend.jpg with your photo</small>
+        </p>
+      </div>
       <p>Us forever ♡</p>
     </div>
     <button onclick="nextStep()">Next →</button>
@@ -76,6 +82,9 @@
     </div>
     <p id="response"></p>
   </section>
+
+  </div>
+  <!-- End container -->
 
   <div id="hearts-container"></div>
 

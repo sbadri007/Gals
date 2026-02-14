@@ -14,7 +14,9 @@ function checkPassword() {
 
   if (input === password) {
     document.getElementById("password-screen").style.display = "none";
-    document.getElementById("main-content").style.display = "block";
+    const mainContent = document.getElementById("main-content");
+    mainContent.style.display = "flex";
+    mainContent.classList.add("show");
     showStep(0);
   } else {
     alert("Nope 😤 try again bestie");

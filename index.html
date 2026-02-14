@@ -22,51 +22,59 @@
 <!-- MAIN CONTENT -->
 <div id="main-content">
 
-  <div class="container">
+  <!-- SECTION 1: INTRO -->
+  <section class="step active">
     <h1>Happy Galentine’s Day 💕</h1>
-    <h2>To my favorite human, I cannot imagine anyone else being my dearest Akka, I love you so much <span id="friend-name"></span></h2>
+    <h2>
+      To my favorite human, I cannot imagine anyone else being my dearest Akka.
+      I love you so much, <span id="friend-name"></span> 💖
+    </h2>
+    <button onclick="nextStep()">Next →</button>
+  </section>
 
-    <p id="countdown"></p>
-
-    <!-- Polaroid Photo -->
+  <!-- SECTION 2: PHOTO -->
+  <section class="step">
     <div class="polaroid">
       <img src="assets/friend.jpg" alt="Us together">
       <p>Us forever ♡</p>
     </div>
+    <button onclick="nextStep()">Next →</button>
+  </section>
 
-    <!-- Roses -->
-    <div class="roses">🌹 🌹 🌹 🌹 🌹</div>
+  <!-- SECTION 3: SONG -->
+  <section class="step">
+    <p>
+      This song always reminds me of us — our room, Alexa on full volume,
+      and zero worries 💗
+    </p>
+    <audio controls>
+      <source src="assets/song.mp3" type="audio/mpeg">
+    </audio>
+    <button onclick="nextStep()">Next →</button>
+  </section>
 
-    <!-- Music -->
-    <div class="music">
-      <p>This song always reminds me of you, always, us listening to this song on repeat in our room in shollinganallur, 
-        blasting it on alexa. Wish we could go back 💗</p>
-      <audio controls>
-        <source src="assets/song.mp3" type="audio/mpeg">
-      </audio>
-    </div>
-
-    <!-- Love Letter -->
+  <!-- SECTION 4: MESSAGE -->
+  <section class="step">
     <div class="letter">
       <p>
         Dear <span id="friend-name-2"></span>,<br><br>
-        Life is the best with my Akka, always listening to my rants, 
-        being there when I always need you. Even now. 
-        Being your thanga papa has been the best mumula. 
-        Thanks for standing by me always, Noonima.
-        I choose you always💖
+        Being your thanga papa has been the best mumala.
+        Thank you for always being there, listening to me,
+        and choosing me every time. I choose you, always 💖
       </p>
     </div>
+    <button onclick="nextStep()">Next →</button>
+  </section>
 
-    <!-- Question -->
+  <!-- SECTION 5: QUESTION -->
+  <section class="step">
     <div class="question-box">
       <p>Will you be my Galentine? 💘</p>
       <button onclick="sayYes()">YES 💖</button>
       <button onclick="sayNo()">NO 🙄</button>
     </div>
-
     <p id="response"></p>
-  </div>
+  </section>
 
 </div>
 

@@ -1,3 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f5c6d6, #fff4ec);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* PASSWORD */
 #password-screen {
   height: 100vh;
   background: linear-gradient(135deg, #f06292, #fce4ec);
@@ -13,19 +23,21 @@
   border-radius: 20px;
   border: none;
   margin: 10px;
+  width: 220px;
 }
 
 #password-screen button {
   background: #c2185b;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  cursor: pointer;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, #f5dce6, #fff4ec);
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  overflow-x: hidden;
+/* MAIN CONTENT */
+#main-content {
+  display: none;
 }
 
 .container {
@@ -45,28 +57,53 @@ h2 {
   color: #6a1b4d;
 }
 
-.photo-frame {
+#countdown {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #880e4f;
+}
+
+/* Polaroid */
+.polaroid {
+  background: white;
+  padding: 15px;
+  width: 260px;
   margin: 30px auto;
-  border: 8px solid #f8bbd0;
-  border-radius: 20px;
-  width: 280px;
-  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  transform: rotate(-2deg);
 }
 
-.photo-frame img {
+.polaroid img {
   width: 100%;
-  display: block;
 }
 
+.polaroid p {
+  font-family: 'Playfair Display', serif;
+  margin-top: 10px;
+}
+
+/* Roses */
 .roses {
   font-size: 2rem;
   margin: 20px 0;
 }
 
+/* Music */
 .music {
   margin: 30px 0;
 }
 
+/* Letter */
+.letter {
+  background: #fffaf5;
+  padding: 25px;
+  border-radius: 20px;
+  font-family: 'Playfair Display', serif;
+  color: #6a1b4d;
+  margin: 40px 0;
+}
+
+/* Question */
 .question-box p {
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
@@ -95,14 +132,27 @@ button:hover {
   color: #880e4f;
 }
 
-/* Hearts animation */
+/* Hearts */
 .heart {
   position: fixed;
-  font-size: 24px;
   animation: floatUp 2s ease-in forwards;
 }
 
 @keyframes floatUp {
-  0% { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(-200px); }
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+}
+
+/* Falling roses */
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
 }

@@ -1,5 +1,3 @@
-alert("script loaded");
-
 // PERSONALIZE THESE FOR EACH FRIEND
 const friendName = "Shruti";      // change per friend
 const password = "nooni";         // change per friend

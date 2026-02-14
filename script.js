@@ -1,6 +1,6 @@
 // PERSONALIZE THESE FOR EACH FRIEND
-const friendName = "Anya";        // change name
-const password = "insidejoke";   // change password
+const friendName = "Shruti";        // change name
+const password = "nooni";   // change password
 
 document.getElementById("friend-name").innerText = friendName;
 document.getElementById("friend-name-2").innerText = friendName;
@@ -13,7 +13,7 @@ function checkPassword() {
     startCountdown();
     startPetals();
   } else {
-    alert("Nope 😤 try again bestie");
+    alert("Nope 😤 try again bestie, hint:I call you this all the time");
   }
 }
 

@@ -38,20 +38,19 @@ body {
 /* MAIN CONTENT */
 #main-content {
   display: none;
+}
+
+#main-content.show {
+  display: flex;
   min-height: 100vh;
   align-items: center;
   justify-content: center;
   padding: 20px;
 }
 
-#main-content.show {
-  display: flex;
-}
-
 .container {
   max-width: 600px;
   width: 100%;
-  margin: auto;
   padding: 40px 20px;
 }
 

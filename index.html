@@ -1,0 +1,59 @@
+<div id="password-screen">
+  <h1>💌 Enter the Secret Code 💌</h1>
+  <input type="password" id="passwordInput" placeholder="hint: our thing 👀">
+  <button onclick="checkPassword()">Enter</button>
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sharan’s Galentines 2026 💖</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>Happy Galentine’s Day 💕</h1>
+    <h2>To my favorite human, <span id="friend-name">Bestie</span></h2>
+
+    <!-- Photo -->
+    <div class="photo-frame">
+      <img src="assets/friend.jpg" alt="Us together">
+    </div>
+
+    <!-- Roses -->
+    <div class="roses">
+      🌹 🌹 🌹 🌹 🌹
+    </div>
+
+    <!-- Music -->
+    <div class="music">
+      <p>This song always reminds me of us 💗</p>
+      <audio controls>
+        <source src="assets/song.mp3" type="audio/mpeg">
+      </audio>
+    </div>
+
+    <!-- Question -->
+    <div class="question-box">
+      <p>Will you be my Galentine? 💘</p>
+      <button onclick="sayYes()">YES 💖</button>
+      <button onclick="sayNo()">NO 🙄</button>
+    </div>
+
+    <p id="response"></p>
+
+  </div>
+
+  <!-- Hearts -->
+  <div id="hearts-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

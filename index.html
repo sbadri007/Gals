@@ -24,7 +24,20 @@
 <div id="main-content">
   <div class="container">
 
-  <!-- SECTION 1: INTRO -->
+  <!-- SECTION 1: SONG -->
+  <section class="step">
+    <p>
+      This song always reminds me of us — our room, Alexa on full volume,
+      and zero worries 💗
+    </p>
+    <audio controls>
+      <source src="assets/song.mp3" type="audio/mpeg">
+    </audio>
+    </n>
+    <button onclick="nextStep()">Next →</button>
+  </section>  
+
+  <!-- SECTION 2: INTRO -->
   <section class="step">
   <h1>Happy Galentine’s Day 💕</h1>
   <h2>
@@ -34,7 +47,7 @@
   <button onclick="nextStep()">Next →</button>
 </section>
 
- <!-- SECTION 2: PHOTO -->
+ <!-- SECTION 3: PHOTO -->
 <section class="step">
   <div class="polaroid">
     <!-- DELETE the entire image-placeholder div below -->
@@ -50,18 +63,6 @@
   <button onclick="nextStep()">Next →</button>
 </section>
 
-  <!-- SECTION 3: SONG -->
-  <section class="step">
-    <p>
-      This song always reminds me of us — our room, Alexa on full volume,
-      and zero worries 💗
-    </p>
-    <audio controls>
-      <source src="assets/song.mp3" type="audio/mpeg">
-    </audio>
-    <button onclick="nextStep()">Next →</button>
-  </section>
-
   <!-- SECTION 4: MESSAGE -->
   <section class="step">
     <div class="letter">
@@ -69,7 +70,8 @@
         Dear <span id="friend-name-2"></span>,<br><br>
         Being your thanga papa has been the best mumala.
         Thank you for always being there, listening to me,
-        and choosing me every time. I choose you, always 💖
+        and choosing me every time. 
+        I choose you, always Noonima 💖
       </p>
     </div>
     <button onclick="nextStep()">Next →</button>

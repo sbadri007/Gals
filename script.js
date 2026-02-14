@@ -44,10 +44,10 @@ function sayNo() {
 function sayYes() {
   document.getElementById("response").innerText =
     "YAY 💕 Galentines forever!!!";
-  burstHearts();
+  startContinuousHearts();
 }
 
-// HEARTS
+// HEARTS - Continuous falling
 let heartsInterval;
 
 function startContinuousHearts() {

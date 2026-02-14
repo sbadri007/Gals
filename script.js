@@ -16,7 +16,6 @@ function checkPassword() {
     document.getElementById("password-screen").style.display = "none";
     const mainContent = document.getElementById("main-content");
     mainContent.style.display = "flex";
-    mainContent.classList.add("show");
     showStep(0);
   } else {
     alert("Nope 😤 try again bestie");
@@ -39,7 +38,7 @@ function nextStep() {
 // ANSWERS
 function sayNo() {
   document.getElementById("response").innerText =
-    "You can’t say no because we’re together forever 💅💖";
+    "You can't say no because we're together forever 💅💖";
 }
 
 function sayYes() {
@@ -57,10 +56,12 @@ function burstHearts() {
     heart.className = "heart";
     heart.innerText = "❤️";
     heart.style.left = Math.random() * 100 + "vw";
-    heart.style.top = "100vh";
+    heart.style.top = "-50px"; // Start above the screen
     heart.style.fontSize = Math.random() * 20 + 20 + "px";
+    heart.style.animationDelay = Math.random() * 2 + "s"; // Stagger the start times
+    heart.style.animationDuration = (Math.random() * 2 + 3) + "s"; // Random fall speed
 
     container.appendChild(heart);
-    setTimeout(() => heart.remove(), 2000);
+    setTimeout(() => heart.remove(), 5000);
   }
 }

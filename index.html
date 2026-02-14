@@ -2,14 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Sharan’s Galentines 2026 💖</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sharan's Galentines 2026 💖</title>
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <!-- PASSWORD SCREEN -->
@@ -18,7 +16,6 @@
   <input type="password" id="passwordInput" placeholder="hint: my nickname for you">
   <button onclick="checkPassword()">Enter</button>
 </div>
-
 
 <!-- MAIN CONTENT WRAPPER -->
 <div id="main-content">
@@ -33,35 +30,27 @@
     <audio controls>
       <source src="assets/song.mp3" type="audio/mpeg">
     </audio>
-    </n>
     <button onclick="nextStep()">Next →</button>
   </section>  
 
   <!-- SECTION 2: INTRO -->
   <section class="step">
-  <h1>Happy Galentine’s Day 💕</h1>
-  <h2>
-      To my favorite human, I cannot imagine anyone else being my dearest Akka.
-      I love you so much, <span id="friend-name"></span> 💖
-   </h2>
-  <button onclick="nextStep()">Next →</button>
-</section>
+    <h1>Happy Galentine's Day 💕</h1>
+    <h2>
+        To my favorite human, I cannot imagine anyone else being my dearest Akka.
+        I love you so much, <span id="friend-name"></span> 💖
+    </h2>
+    <button onclick="nextStep()">Next →</button>
+  </section>
 
- <!-- SECTION 3: PHOTO -->
-<section class="step">
-  <div class="polaroid">
-    <!-- DELETE the entire image-placeholder div below -->
-    <div class="image-placeholder">
-      ...
+  <!-- SECTION 3: PHOTO -->
+  <section class="step">
+    <div class="polaroid">
+      <img src="https://sbadri007.github.io/Gals/assets/friend.jpg" alt="Us together">
+      <p>Us forever ♡</p>
     </div>
-    
-    <!-- ADD this line instead with YOUR image URL -->
-    <img src="https://sbadri007.github.io/Gals/assets/friend.jpg" alt="Us together">
-    
-    <p>Us forever ♡</p>
-  </div>
-  <button onclick="nextStep()">Next →</button>
-</section>
+    <button onclick="nextStep()">Next →</button>
+  </section>
 
   <!-- SECTION 4: MESSAGE -->
   <section class="step">
@@ -90,10 +79,10 @@
   </div>
   <!-- End container -->
 
-  <div id="hearts-container"></div>
-
 </div>
 <!-- End main-content -->
+
+<div id="hearts-container"></div>
 
 <script src="script.js"></script>
 </body>

@@ -1,24 +1,42 @@
 alert("script loaded");
 
 // PERSONALIZE THESE FOR EACH FRIEND
-const friendName = "Shruti";        // change name
-const password = "nooni";   // change password
+const friendName = "Shruti";      // change per friend
+const password = "nooni";         // change per friend
 
 document.getElementById("friend-name").innerText = friendName;
 document.getElementById("friend-name-2").innerText = friendName;
 
+const steps = document.querySelectorAll(".step");
+let currentStep = 0;
+
+// PASSWORD CHECK
 function checkPassword() {
   const input = document.getElementById("passwordInput").value;
+
   if (input === password) {
     document.getElementById("password-screen").style.display = "none";
     document.getElementById("main-content").style.display = "block";
-    startCountdown();
-    startPetals();
+    showStep(0);
   } else {
-    alert("Nope 😤 try again bestie, hint:I call you this all the time");
+    alert("Nope 😤 try again bestie");
   }
 }
 
+// STEP CONTROL
+function showStep(index) {
+  steps.forEach(step => step.classList.remove("active"));
+  steps[index].classList.add("active");
+}
+
+function nextStep() {
+  if (currentStep < steps.length - 1) {
+    currentStep++;
+    showStep(currentStep);
+  }
+}
+
+// ANSWERS
 function sayNo() {
   document.getElementById("response").innerText =
     "You can’t say no because we’re together forever 💅💖";
@@ -27,11 +45,10 @@ function sayNo() {
 function sayYes() {
   document.getElementById("response").innerText =
     "YAY 💕 Galentines forever!!!";
-
   burstHearts();
-  startPetals();
 }
 
+// HEARTS
 function burstHearts() {
   const container = document.getElementById("hearts-container");
 
@@ -44,23 +61,6 @@ function burstHearts() {
     heart.style.fontSize = Math.random() * 20 + 20 + "px";
 
     container.appendChild(heart);
-
     setTimeout(() => heart.remove(), 2000);
-  }
-}
-
-function startPetals() {
-  for (let i = 0; i < 10; i++) {
-    const petal = document.createElement("div");
-    petal.innerText = "🌹";
-    petal.style.position = "fixed";
-    petal.style.left = Math.random() * 100 + "vw";
-    petal.style.top = "-10px";
-    petal.style.fontSize = "24px";
-    petal.style.animation = "fall 6s linear";
-
-    document.body.appendChild(petal);
-
-    setTimeout(() => petal.remove(), 6000);
   }
 }

@@ -1,6 +1,11 @@
-body {
+html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+body {
   background: linear-gradient(135deg, #f5c6d6, #fff4ec);
   font-family: 'Poppins', sans-serif;
   text-align: center;
@@ -42,10 +47,12 @@ body {
 
 #main-content.show {
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
   align-items: center;
   justify-content: center;
   padding: 20px;
+  box-sizing: border-box;
 }
 
 .container {
